@@ -125,13 +125,23 @@ function addReposToProjectSection(repositories) {
   console.log({ repositories: repositories})
   const projectSection = document.getElementById('projects');
   const projectList = projectSection.querySelector('ul');
+
   for (let i = 0; i < repositories.length; i++) {
     const repo = repositories[i];
+    console.log(repo);
     const project = document.createElement('li');
     const repoURL = document.createElement('a')
     repoURL.setAttribute('href', repo.html_url);
+    repoURL.target = '_blank';
     repoURL.innerText = repo.name;
+
+    const projectLanguage = document.createElement('li');
+    projectLanguage.innerText = repositories[i].language;
+    // it's not passing Python language! why?
+    projectLanguage.style.fontStyle = 'italic';
+
     project.appendChild(repoURL);
+    project.appendChild(projectLanguage);
     projectList.appendChild(project);
   }
 }

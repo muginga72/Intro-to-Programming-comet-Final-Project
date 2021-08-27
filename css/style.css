@@ -30,9 +30,9 @@
   }
   
   .image--rounded {
-    width: 200px;
+    width: 200px; /*works well for all devices*/
     border-radius: 50%;
-    border: 3px solid rgb(161, 212, 221);
+    border: 3px solid rgb(197, 212, 205);
   }
   
   /* ---- Navigation ---- */
@@ -133,12 +133,19 @@
     font-weight: bolder;
     display: inline-block;
     writing-mode: horizontal-tb;
-    margin: 8px;
+    margin: 6px;
     padding: 5px;
     background-color: whitesmoke;
     border-radius: 8px;
     box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
   }
+
+#skillsList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+} 
   
   /* ============ Experience section ================ */
   .experience {
@@ -156,9 +163,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-      padding: 10px;
-      margin: 2px;
-      border-radius: 8px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 8px;
   }
   
   /* =============== Projects ================ */
@@ -180,19 +187,20 @@
   
   /* Change padding, background color, border, etc. of submit button */
   #submitButton {
-    /* submit button style */
+    display: grid;
     flex: 1;
     font-size: 1.0rem;
+    text-align: center;
     width: 22%;
     color: white;
     border: blue;
     border-width: 16px;
     flex-direction: column;
     margin-top: auto;
-    align-self: flex-start;
+    align-self:center;
     background-color: blue;
     border-radius: 5px;
-  } */
+  } 
   
   /* Transform the "Messages" list items into styled blocks and customize the button(s)*/
   #newMessage {
@@ -224,6 +232,7 @@
   .leave-a-message {
     display: grid;
     margin: 15px auto;
+    justify-content: center;
     padding: 8px;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, 300px);
