@@ -8,7 +8,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   
   .nav {
@@ -37,7 +37,7 @@
   
   /* ---- Navigation ---- */
   .name {
-    font-size: 1.35em;
+    font-size: 1.35rem;
     margin: 0;
   }
   
@@ -114,6 +114,11 @@
   
   .fa_custom {
     color: black;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
   }
   
   .fa-google {
